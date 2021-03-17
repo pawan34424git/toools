@@ -1,16 +1,15 @@
 package com.pawan;
 
 import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.PriorityBlockingQueue;
-import java.util.concurrent.SynchronousQueue;
+import java.util.concurrent.LinkedBlockingQueue;
 
 public class QueueExample {
 	public static void main(String[] args) {
 //		final BlockingQueue<Integer> pbq = new PriorityBlockingQueue<>();
-//		final BlockingQueue<Integer> pbq = new LinkedBlockingQueue<>();
+		final BlockingQueue<Integer> pbq = new LinkedBlockingQueue<>();
 //		final BlockingQueue<Integer> pbq = new ArrayBlockingQueue<>(10);
 //		 DelayQueue pbq = new DelayQueue();
-		final BlockingQueue<Integer> pbq = new SynchronousQueue<>();
+//		final BlockingQueue<Integer> pbq = new SynchronousQueue<>();
 		
 		Thread producer = new Thread(() -> {
 			while (true) {
